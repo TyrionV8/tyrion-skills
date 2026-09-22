@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Make It Glow — terminal aprovado</title></head>
+<body>
+<div id="glow-terminal-preview" role="img" aria-label="Proposta de terminal: títulos ciano, comandos azuis, sucesso verde, aviso amarelo e erro vermelho. Mensagens fictícias de demonstração.">
+  <style>
+    #glow-terminal-preview { color-scheme: light dark; font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 14px; line-height: 1.7; }
+    #glow-terminal-preview .window { background: light-dark(#f8fafc,#141b24); color: light-dark(#253244,#e2e8f0); border: 1px solid light-dark(#cbd5e1,#3b4757); border-radius: 10px; overflow: hidden; }
+    #glow-terminal-preview .bar { background: light-dark(#e9eef4,#202b38); color: light-dark(#526176,#afbbcc); padding: 10px 20px; display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px; }
+    #glow-terminal-preview .screen { padding: 22px; overflow-wrap:anywhere; }
+    #glow-terminal-preview .title { color: light-dark(#006b7a,#67dbe8); font-weight:700; }
+    #glow-terminal-preview .name { color: light-dark(#225db0,#91baff); }
+    #glow-terminal-preview .muted { color: light-dark(#586679,#a4b1c2); }
+    #glow-terminal-preview .success { color: light-dark(#24713c,#8cdb9e); }
+    #glow-terminal-preview .warning { color: light-dark(#865b00,#edca79); }
+    #glow-terminal-preview .error { color: light-dark(#b52b39,#ff929b); }
+    #glow-terminal-preview .section { margin-top:24px; }
+    #glow-terminal-preview .menu { display:grid; gap:8px; margin-top:12px; }
+    #glow-terminal-preview .menu .name { color: light-dark(#075dcc,#419dff); font-weight:700; }
+    #glow-terminal-preview .menu-title { color: light-dark(#007285,#20e4ff); }
+    #glow-terminal-preview .selected .name { color: light-dark(#064fc4,#63bcff); }
+    #glow-terminal-preview .cursor { color: light-dark(#005bc4,#38c9ff); font-weight:700; }
+    #glow-terminal-preview .detail { margin-top:12px; padding-left:16px; border-left:3px solid light-dark(#00879a,#20d9ef); }
+    #glow-terminal-preview .detail-name { color: light-dark(#064fc4,#63bcff); font-weight:700; }
+    #glow-terminal-preview .detail-row { margin-top:8px; }
+    #glow-terminal-preview .label { color: light-dark(#854300,#ffb454); font-weight:700; }
+    #glow-terminal-preview .selected { background: light-dark(#d9eaff,#173956); padding:6px 10px; margin-left:-10px; border-radius:3px; }
+  </style>
+  <div class="window">
+    <div class="bar"><span>Terminal · meus scripts</span><span>PRÉVIA · dados fictícios</span></div>
+    <div class="screen">
+      <div><span class="muted">$</span> <span class="name">listar-scripts --use</span></div>
+      <div class="section title menu-title">◆ Escolha um script</div>
+      <div class="muted">3 opções · ↑ ↓ navegar · Enter selecionar · Esc sair</div>
+      <div class="menu">
+        <div class="selected"><span class="cursor">❯</span> <span class="name">comandos-docker</span> — Gerenciar projetos</div>
+        <div>&nbsp; <span class="name">para-docker</span> — Parar contêineres</div>
+        <div>&nbsp; <span class="name">roda-docker</span> — Retomar contêineres</div>
+      </div>
+      <div class="section title">◆ Detalhes da seleção</div>
+      <div class="detail">
+        <div class="detail-name">comandos-docker</div>
+        <div>Exibe ações disponíveis para cada projeto.</div>
+        <div class="detail-row"><span class="label">Diretório</span> <span class="name">~/repos/scripts</span></div>
+        <div><span class="label">Comando</span> <span class="name">./comandos-docker</span></div>
+      </div>
+      <div class="section title">◆ Exemplos de mensagens</div>
+      <div><span class="success">✓ Sucesso:</span> operação concluída.</div>
+      <div><span class="warning">! Aviso:</span> confira a seleção antes de continuar.</div>
+      <div><span class="error">✗ Erro:</span> diretório de exemplo não encontrado.</div>
+      <div class="section"><span class="title">›</span> <span class="muted">Aguardando seleção…</span></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
