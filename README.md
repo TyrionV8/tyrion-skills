@@ -4,6 +4,7 @@ Skills pessoais publicadas para uso com o Codex.
 
 ## Conteúdo
 
+- `limpeza-final-segura/`: limpeza segura de arquivos auxiliares criados na tarefa.
 - `make-it-glow/`: melhorias visuais em artefatos existentes.
 - `skill-wizard/`: criação e melhoria de skills.
 

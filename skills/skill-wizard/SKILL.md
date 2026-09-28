@@ -7,6 +7,22 @@ description: Entrevista o usuário, uma pergunta por vez, para criar ou melhorar
 
 Conduza uma entrevista analítica e criativa para criar uma skill ou melhorar uma existente. Faça propostas, examine suas consequências e critique problemas concretos. A decisão final sobre o conteúdo e a instalação é do usuário.
 
+## Condução e continuidade obrigatória
+
+Guie o usuário ativamente até o resultado desejado. Não deixe que ele precise perguntar "e agora?" ou cobrar a execução para que o processo avance.
+
+Após cada resposta, incorpore a decisão e avance no mesmo turno: faça a próxima pergunta necessária ou realize a próxima etapa autorizada. Pode pedir autorização para começar o rascunho; isso é uma pergunta válida. Se essa autorização já foi dada e não restarem decisões necessárias, comece ou atualize os arquivos em `/tmp`, sem pedir novamente.
+
+Não encerre um turno apenas reconhecendo a resposta, resumindo decisões ou prometendo agir depois. Uma frase como "vou preparar o rascunho" exige execução no mesmo turno; não substitui uma ação nem uma pergunta.
+
+Mantenha a entrevista enquanto houver decisões relevantes para resolver. Assim que não houver, inicie a implementação do rascunho ou pergunte se pode iniciá-la. Não invente perguntas para prolongar a entrevista. Se um ajuste solicitado abrir novas decisões, retome as perguntas sobre elas e volte à implementação assim que forem resolvidas.
+
+Quando o rascunho estiver pronto, apresente o resultado concreto e conduza o usuário à revisão e à autorização de instalação previstas nesta skill. Depois da autorização, prossiga com a instalação e a validação.
+
+Antes de encerrar um turno enquanto o trabalho estiver em andamento, confira se há uma pergunta explícita aguardando resposta ou uma etapa efetivamente realizada com o próximo passo claro. Se ainda puder avançar sem resposta do usuário, continue. Se depender dele para revisar, decidir ou autorizar, faça a pergunta correspondente; não deixe essa dependência implícita.
+
+Se houver um impedimento real, conclua o trabalho independente possível, explique o impedimento e peça a ação ou informação necessária para continuar. Respeite pedidos de pausa e encerramento. A regra de continuidade não autoriza ultrapassar permissões nem continuar depois que o usuário declarar que terminou.
+
 ## Início da entrevista
 
 Se a chamada não for a primeira mensagem da sessão, pergunte primeiro se o usuário quer usar as mensagens recentes do chat como fonte para a skill. Se ele quiser, use apenas o contexto disponível e confirme interpretações importantes antes de transformá-las em instruções permanentes. Se não quiser, conduza a entrevista a partir das informações que ele fornecer.
@@ -46,6 +62,10 @@ Decida com o usuário, quando a escolha for relevante, quanto da skill deve ser 
 Sugira scripts quando a repetição, a precisão ou a necessidade de resultados consistentes justificar código. Prefira inicialmente scripts de shell (`.sh`); use Python quando o shell tornaria a solução frágil ou difícil de manter. Use outra linguagem quando essas opções não forem adequadas. Sugira arquivos Markdown (`.md`) ou JavaScript Object Notation (`.json`, formato de dados estruturados) quando ajudarem a organizar referências, configurações ou dados da skill.
 
 Mantenha o arquivo `SKILL.md` focado nas decisões e instruções essenciais. Crie arquivos auxiliares somente quando tiverem uma função definida. Verifique o funcionamento de scripts propostos antes da instalação.
+
+## Local padrão das skills
+
+Por padrão, mantenha os arquivos de origem das skills em `~/repos/tyrion-skills/skills/` quando puderem ser públicos, ou em `~/repos/tyrion-private-skills/skills/` quando contiverem informações privadas ou específicas de ambientes restritos. Use a localização escolhida explicitamente pelo usuário quando houver uma. Não deixe a única cópia em `~/.codex/skills/`: nesse diretório, instale a skill por atalho simbólico para o repositório correspondente.
 
 ## Revisão e instalação
 
