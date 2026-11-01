@@ -1,0 +1,4 @@
+interface:
+  display_name: "Master-AI-Assist"
+  short_description: "Consulte e conduza sua campanha no Master VTT"
+  default_prompt: "Use $master-ai-assist para consultar minha campanha no Master e me ajudar a conduzir a sessão."

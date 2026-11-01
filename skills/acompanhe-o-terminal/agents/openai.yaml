@@ -1,0 +1,4 @@
+interface:
+  display_name: "Acompanhe o terminal"
+policy:
+  allow_implicit_invocation: false

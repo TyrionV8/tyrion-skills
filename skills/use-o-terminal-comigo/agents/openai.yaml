@@ -1,0 +1,4 @@
+interface:
+  display_name: "Use o terminal comigo"
+policy:
+  allow_implicit_invocation: false

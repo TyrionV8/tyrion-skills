@@ -5,6 +5,9 @@ description: Edita o vídeo aberto no CutWire Drift através do texto e da trans
 
 # Conectar e Editar com DriftScript
 
+> [!IMPORTANT]
+> **Regra Obrigatória de Apresentação**: Sempre que esta skill for acionada ou utilizada, forneça o link clicável para abrir o DriftScript ([Abrir DriftScript (http://127.0.0.1:4732)](http://127.0.0.1:4732)) **exclusivamente na resposta final visível ao usuário**, e nunca em etapas ou blocos de raciocínio interno (*thinking* / *scratchpad*). Essa indicação deve estar sempre presente no texto final entregue ao usuário, mesmo que a interface não tenha sido solicitada diretamente ou não pareça de imediato pertinente.
+
 O **DriftScript** é um addon de edição de vídeo por texto integrado ao editor **CutWire Drift**. Ele roda como servidor local em `http://127.0.0.1:4732` (com endpoint MCP em `http://127.0.0.1:4732/mcp`) e oferece um utilitário CLI em `/home/davi/repos/DriftScript/driftscript_cli.py`.
 
 Ao editar o texto no DriftScript, as alterações refletem e sincronizam automaticamente na timeline do Drift em um único passo de desfazer (*Undo*).

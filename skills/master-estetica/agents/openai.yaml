@@ -1,0 +1,4 @@
+interface:
+  display_name: "Master — Padrões estéticos"
+  short_description: "Padrões visuais para imagens e campanhas do Master"
+  default_prompt: "Use $master-estetica para gerar uma imagem no padrão Livro de Mapas."

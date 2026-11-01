@@ -1,0 +1,70 @@
+{
+  "versaoFicha": 1,
+  "animacao": null,
+  "revisao": null,
+  "estado": "previa_pendente_de_aprovacao",
+  "codigoDiretorio": null,
+  "editor": {
+    "nome": null,
+    "projetoCaminho": null,
+    "revisaoMontagem": null,
+    "inspecionadoEm": null
+  },
+  "videoReferencia": {
+    "caminho": null,
+    "tamanhoBytes": null,
+    "modificadoEm": null,
+    "identificadorConteudo": null
+  },
+  "imagem": {
+    "larguraPixels": null,
+    "alturaPixels": null,
+    "quadrosPorSegundoNumerador": null,
+    "quadrosPorSegundoDenominador": null,
+    "enquadramentoTransformacoes": null
+  },
+  "mapaTemporal": {
+    "segmentos": [],
+    "modeloDeSegmento": {
+      "fonteInicioSegundos": null,
+      "fonteFimSegundos": null,
+      "montagemInicioSegundos": null,
+      "animacaoInicioSegundos": null,
+      "fatorVelocidade": null
+    },
+    "mapaExternoCaminho": null,
+    "exportacaoRecorteInicialSegundos": null,
+    "exportacaoDuracaoSegundos": null,
+    "posicaoPlanejadaNaMontagemSegundos": null
+  },
+  "parametros": {
+    "caminho": null,
+    "rastreamentoCaminho": null,
+    "identificadorDaRevisao": null
+  },
+  "previa": {
+    "caminhoTemporario": null,
+    "revisaoMostrada": null
+  },
+  "aprovacao": {
+    "revisaoAprovada": null,
+    "confirmacaoNaConversa": null,
+    "registradaEm": null
+  },
+  "exportacaoTransparente": {
+    "caminhoPermanente": null,
+    "revisaoExportada": null,
+    "formato": null,
+    "temAudio": null,
+    "validacoesRealizadas": []
+  },
+  "montagem": {
+    "pedidoExplicito": null,
+    "operacaoAutorizada": null,
+    "inserida": false,
+    "posicaoAplicadaSegundos": null,
+    "identificadorDoClipe": null,
+    "validacoesRealizadas": []
+  },
+  "pendencias": []
+}
