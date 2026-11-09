@@ -2,6 +2,10 @@
 
 Este arquivo guarda padrões por categoria de artefato. Apenas perfis explicitamente aprovados pelo usuário devem ser usados como padrões reutilizáveis. Aprovar uma aplicação isolada não aprova a inclusão ou alteração de um perfil.
 
+## Texto informativo e útil
+
+Preferência geral registrada por pedido explícito do usuário em 03/11/2026, aplicável a todas as categorias de artefato. Todo texto deve ensinar, explicar, orientar uma ação, distinguir conteúdo ou permitir navegação e compreensão. Não usar slogans, títulos marketeiros, chamadas vagas ou frases que apenas sirvam de apresentação, como "Da figura para a equação". Nomear diretamente o conteúdo ou a tarefa; por exemplo, "Volume de controle, vazão e escolha da equação". Organização e beleza devem ajudar a estudar e usar o artefato; deixar o resultado mais "legal" não justifica texto inútil. Evitar também títulos que só repitam o que já está visível. Preservar títulos com função real de navegação, acessibilidade ou compreensão.
+
 ## Perfis aprovados
 
 ### Terminal — azul vivo e ciano

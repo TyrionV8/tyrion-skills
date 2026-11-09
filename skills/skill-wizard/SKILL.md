@@ -1,6 +1,6 @@
 ---
 name: skill-wizard
-description: Entrevista o usuário, uma pergunta por vez, para criar ou melhorar skills do Codex. Produz rascunhos editáveis em /tmp, analisa edições manuais e propõe instruções e recursos auxiliares antes de pedir autorização para instalar as mudanças.
+description: Entrevista o usuário, uma pergunta por vez, para criar ou melhorar skills, aproveitando o contexto disponível da conversa. Produz rascunhos editáveis em /tmp e, após autorização, instala a fonte no repositório adequado com links simbólicos para todos os agentes locais.
 ---
 
 # Skill Wizard
@@ -25,7 +25,7 @@ Se houver um impedimento real, conclua o trabalho independente possível, expliq
 
 ## Início da entrevista
 
-Se a chamada não for a primeira mensagem da sessão, pergunte primeiro se o usuário quer usar as mensagens recentes do chat como fonte para a skill. Se ele quiser, use apenas o contexto disponível e confirme interpretações importantes antes de transformá-las em instruções permanentes. Se não quiser, conduza a entrevista a partir das informações que ele fornecer.
+Use sempre o contexto disponível da conversa como fonte para criar ou melhorar a skill, sem perguntar se deve utilizá-lo. Aproveite pedidos, decisões, exemplos e correções já fornecidos; não invente contexto ausente. Pergunte sobre o recorte do contexto somente quando estiver confuso quais partes do trabalho realizado devem orientar a skill. Nesse caso, indique a ambiguidade concreta e pergunte apenas o necessário para resolvê-la. Não transforme hipóteses ou sugestões ainda abertas em instruções permanentes.
 
 Faça uma pergunta por vez. Aproveite respostas já dadas e não siga um questionário fixo quando uma pergunta deixar de ser útil.
 
@@ -65,16 +65,18 @@ Mantenha o arquivo `SKILL.md` focado nas decisões e instruções essenciais. Cr
 
 ## Local padrão das skills
 
-Por padrão, mantenha os arquivos de origem das skills em `~/repos/tyrion-skills/skills/` quando puderem ser públicos, ou em `~/repos/tyrion-private-skills/skills/` quando contiverem informações privadas ou específicas de ambientes restritos. Use a localização escolhida explicitamente pelo usuário quando houver uma. Não deixe a única cópia em `~/.codex/skills/`: nesse diretório, instale a skill por atalho simbólico para o repositório correspondente.
+Após a autorização de instalação, crie ou atualize os arquivos de origem da skill em `~/repos/tyrion-skills/skills/` quando puderem ser públicos, ou em `~/repos/tyrion-private-skills/skills/` quando contiverem informações privadas ou específicas de ambientes restritos. Use a localização escolhida explicitamente pelo usuário quando houver uma. Mantenha uma única fonte canônica no repositório: a instalação deve criar links simbólicos, atalhos que apontam para essa fonte, nos diretórios de descoberta de skills de todos os agentes instalados no computador. Não mantenha cópias divergentes nem deixe a única cópia em um perfil de agente. Salvar no repositório não autoriza commit nem push, o envio ao repositório remoto.
+
+Identifique os agentes instalados e seus diretórios reais de skills, respeitando as configurações e os links de centralização existentes. Neste computador, confira Codex (`~/.codex/skills/` ou `$CODEX_HOME/skills/`), Claude Code (`~/.claude/skills/`), Gemini CLI (`~/.gemini/skills/`) e Antigravity (`~/.gemini/antigravity/global_skills/`), além de `~/.gemini/config/skills/` quando usado para compatibilidade. Esses caminhos são referências deste ambiente; reconfirme-os em outra máquina. Antes de criar links, confira se o destino já existe: reutilize links corretos e não substitua pastas, links diferentes ou trabalho alheio sem examinar o conflito.
 
 ## Revisão e instalação
 
 Quando houver informação suficiente, apresente o nome, a descrição de seleção, os arquivos propostos e, ao editar uma skill existente, as diferenças em relação à versão instalada. Antes de instalar, mostre no chat pelo menos um exemplo concreto de uso e um trecho representativo da instrução proposta, para que o usuário veja o comportamento esperado sem abrir o arquivo. Convide o usuário a revisar os rascunhos. Releia-os após cada revisão manual.
 
-Os arquivos em `/tmp` são rascunhos, não uma instalação. Antes de instalar uma skill nova ou substituir arquivos de uma skill existente, mostre exatamente quais arquivos serão afetados e peça autorização explícita para essa ação.
+Os arquivos em `/tmp` são rascunhos, não uma instalação. Antes de instalar uma skill nova ou substituir arquivos de uma skill existente, mostre exatamente quais arquivos serão afetados no repositório e quais links simbólicos serão criados ou alterados nos perfis dos agentes; peça autorização explícita para essa instalação completa.
 
-Depois da autorização, releia os rascunhos, instale somente os arquivos aprovados e valide a estrutura. Se houver alterações nos arquivos instalados desde a comparação apresentada ao usuário, examine-as e obtenha uma nova decisão antes de sobrescrevê-las.
+Depois da autorização, releia os rascunhos, instale somente os arquivos aprovados no repositório escolhido e configure os links simbólicos para todos os agentes locais identificados. A autorização de instalação abrange a fonte no repositório e esses links apresentados na revisão; não peça confirmação adicional para cada agente. Valide a estrutura e confirme que cada link resolve para a fonte canônica e permite ler `SKILL.md`. Se houver alterações nos arquivos instalados desde a comparação apresentada ao usuário, examine-as e obtenha uma nova decisão antes de sobrescrevê-las.
 
-Ao concluir a instalação, informe quais arquivos foram criados ou alterados, o resultado da validação e qualquer verificação que não tenha sido possível fazer. Explique brevemente para que serve a skill e como chamá-la. Mostre um exemplo concreto e simples de uso, adaptado à skill criada ou editada.
+Ao concluir a instalação, informe a localização da fonte no repositório, os arquivos criados ou alterados, os agentes com links verificados, o resultado da validação e qualquer verificação que não tenha sido possível fazer. Diferencie links instalados de carregamento efetivo da skill por uma sessão já aberta; informe quando for necessário iniciar nova sessão para atualizar o catálogo. Explique brevemente para que serve a skill e como chamá-la. Mostre um exemplo concreto e simples de uso, adaptado à skill criada ou editada.
 
 Por fim, pergunte se o usuário quer aprender a usá-la passo a passo ou receber mais exemplos adequados às suas funções. Se ele aceitar, forneça a explicação ou os exemplos solicitados.

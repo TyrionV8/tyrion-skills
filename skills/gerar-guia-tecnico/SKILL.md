@@ -7,6 +7,10 @@ description: Gera um guia técnico de estudo e consulta em arquivo HTML único p
 
 Produza um material de estudo que dê ao usuário domínio sobre aquilo que planejamos ou implementamos. O leitor principal é sempre o próprio usuário: ele precisa entender o que cada coisa é, como funciona, por que existe e como se relaciona com o restante. O guia também deve ajudá-lo a explicar o trabalho aos colegas, orientar uma manutenção futura e responder às perguntas do cliente.
 
+## Texto com função didática
+
+Todo texto deve ensinar, explicar, orientar uma ação ou identificar conteúdo de forma útil. Use títulos que indiquem o conceito, a relação ou o procedimento tratado. Não acrescente slogans, títulos marketeiros, chamadas vagas, frases motivacionais ou texto que só sirva de apresentação ou de nome de capítulo. Por exemplo, prefira "Volume de controle, vazão e escolha da equação" a "Da figura para a equação". Remova texto sem informação adicional; mantenha os títulos necessários à navegação, à acessibilidade e à compreensão. A organização visual deve facilitar o aprendizado e a consulta, sem usar texto decorativo para tornar o artefato mais "legal".
+
 ## Contexto e investigação
 
 - Use o pedido e a conversa como fonte primária para identificar o trabalho, recuperar decisões e delimitar o projeto, a funcionalidade ou o planejamento que será estudado. A conversa orienta a investigação, mas não é a única fonte nem representa necessariamente toda a implementação. Pergunte apenas o que faltar para compreender esse escopo; não volte a perguntar quem é o público.
