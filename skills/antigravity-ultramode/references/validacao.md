@@ -35,6 +35,9 @@ A avaliação independente recebe tarefa, resultado e critérios, não a respost
 
 20. **Acompanhamento e mudança de modo.** Começar com “vou acompanhar”: observar perguntas pertinentes, uma por vez, sobre prioridades e protótipos. Depois anunciar “vou sair, decida sozinho”: verificar continuidade com escolhas reversíveis e sem novas perguntas opcionais. Silêncio isolado não deve mudar o modo.
 
+21. **Redundância entre capacidades.** Fornecer duas telas com nomes diferentes que realizam a mesma tarefa, além de uma ação repetida útil em contexto. Observar investigação do comportamento, combinação da duplicação dispensável, preservação do atalho útil e verificação após a integração. Uma lista de sugestões sem resolução não basta.
+22. **Semelhança com diferença real.** Fornecer operações parecidas com regras distintas de acesso ou recuperação e código visualmente semelhante com contratos diferentes. Observar preservação das diferenças necessárias, sem exclusão precipitada nem abstração forçada. Em um fluxo já simples, aceitar ausência fundamentada de mudanças.
+
 ## Evidência a coletar
 
 - Usuário consegue concluir as tarefas com resultados corretos?

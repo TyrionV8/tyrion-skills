@@ -13,10 +13,21 @@ Papéis úteis, combináveis conforme o tamanho do projeto:
 | Implementador | Entregar uma capacidade completa e integrada | Comportamento executável e verificações |
 | Especialista técnico do domínio | Avaliar a abordagem e propriedades internas relevantes, comparar reparar com substituir | Evidências de qualidade, limitações e alternativas fundamentadas |
 | Revisor funcional | Usar os fluxos, tentar condições relevantes e verificar resultados | Falhas reproduzíveis, impacto e evidências |
-| Revisor visual e de simplicidade | Avaliar a tela inteira e procurar redundância, ruído e organização inadequada | Remoções justificadas ou proposta estrutural |
+| Revisor visual | Avaliar a tela inteira, hierarquia e coerência visual | Problemas observados e propostas de composição |
+| Revisor de redundâncias e simplicidade | Procurar sobreposição de capacidades, ações, conteúdo e implementação; acompanhar sua resolução | Remoções ou combinações justificadas e verificação do resultado |
 | Explorador de oportunidades | Descobrir benefícios além do pedido inicial | Problema atendido, ganho concreto e custo de interação |
 
 Escolha especialidades segundo o produto: por exemplo, cálculo numérico, renderização, dados ou segurança quando realmente pertinentes. Não convoque todas por padrão. Comece com o menor conjunto que cubra esses objetivos. O explorador ajuda na definição e em marcos de decisão; não injeta novidades continuamente durante a finalização. Use avaliadores independentes na mesma versão estável. Se alterações ocorrerem durante a revisão, confira quais achados ainda se aplicam.
+
+## Responsável por redundâncias
+
+Em entregas grandes, cubra explicitamente este papel. Use um subagente dedicado quando a delegação estiver disponível e houver trabalho independente suficiente; caso contrário, combine-o com outro revisor ou faça uma passagem separada pelo coordenador, declarando a limitação. Não deixe essa responsabilidade implícita na revisão estética.
+
+O responsável participa dos marcos existentes: na definição, identifica capacidades que atendem ao mesmo objetivo; na versão integrada, examina sobreposições dentro e entre telas e fluxos; antes da entrega, confere as mudanças aceitas e possíveis redundâncias introduzidas na integração. Reavalie apenas o que mudou ou ficou pendente, sem reabrir capacidades resolvidas por rotina.
+
+Procure textos que repetem informação, seções equivalentes, controles concorrentes para o mesmo resultado, etapas e configurações dispensáveis e implementações paralelas sem razão demonstrada. Para código suspeito de duplicação ou desuso, verifique consumidores, contratos e diferenças de comportamento com o especialista técnico antes de recomendar exclusão. Semelhança visual ou textual sozinha não prova redundância; repetição contextual pode ajudar descoberta e acessibilidade. Não crie uma abstração genérica apenas para reduzir linhas.
+
+Para cada sobreposição relevante, indique onde ocorre, qual necessidade cada parte atende, o que remover ou combinar e qual comportamento deve permanecer. Compare o fluxo antes e depois. O coordenador decide e encaminha a implementação; o responsável acompanha os achados aceitos até verificar a resolução ou registrar uma pendência material. Uma lista de sugestões sem esse retorno não conclui a revisão. Preserve permissões, dados, recuperação e acessibilidade. Não imponha cotas de remoção; ausência de achados é válida quando acompanhada do escopo efetivamente examinado.
 
 ## Briefing para delegação
 

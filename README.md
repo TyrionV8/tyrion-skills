@@ -17,6 +17,7 @@ Uma **skill** (habilidade) é uma pasta com um arquivo `SKILL.md` que orienta o 
 | [acompanhe-o-terminal](skills/acompanhe-o-terminal/SKILL.md) | Acompanha a saída do terminal e orienta os passos que você executa. | “Acompanhe o terminal enquanto eu rodo a instalação.” |
 | [analisar-relevancia-da-transcricao](skills/analisar-relevancia-da-transcricao/SKILL.md) | Classifica falas no medidor de relevância do DriftScript, sem cortá-las automaticamente. | “Analise a relevância da transcrição.” |
 | [antigravity-ultramode](skills/antigravity-ultramode/SKILL.md) | Conduz projetos abertos no Antigravity com comparação de protótipos, revisão técnica e visual e escolha entre trabalho acompanhado e autônomo. | “Use antigravity-ultramode para criar este produto. Vou acompanhar as escolhas de direção.” |
+| [antigravity-ultramode-force](skills/antigravity-ultramode-force/SKILL.md) | Conduz construções no Antigravity com marco obrigatório de congelamento e despacho compulsório de subagentes independentes para revisão técnica e simplificação de redundâncias. | “Use antigravity-ultramode-force para criar este produto com validação multiagente obrigatória.” |
 | [appimageicon](skills/appimageicon/SKILL.md) | Garante a exibição correta e persistente de ícones em AppImages no Linux (caminho absoluto no .desktop, sincronização de StartupWMClass e auto-registro via $APPIMAGE). | “Configure o ícone deste AppImage para nunca sumir na barra de tarefas.” |
 | [audioscripter](skills/audioscripter/SKILL.md) | Edita áudio pela transcrição no AudioScripterAI, com cortes, limpeza de voz e exportação de áudio e legendas. | “Encurte as pausas no AudioScripterAI e exporte o áudio com a legenda sincronizada.” |
 | [conectar-drift](skills/conectar-drift/SKILL.md) | Verifica e configura a conexão do agente com o editor CutWire Drift. | “Conecte o agente ao Drift.” |
@@ -88,7 +89,7 @@ Se uma habilidade recém-instalada não aparecer, inicie uma nova sessão do Cod
 
 ### Construções grandes no Antigravity
 
-A `antigravity-ultramode` foi pensada para iniciar produtos e conduzir tarefas de escopo aberto. Os especialistas avaliam o funcionamento, a implementação e a interface; podem recomendar remoções ou substituir uma abordagem inadequada. O esforço adicional deve gerar qualidade e capacidades úteis, sem multiplicar textos, controles ou variações da mesma ação.
+A `antigravity-ultramode` e a `antigravity-ultramode-force` foram pensadas para iniciar produtos e conduzir tarefas de escopo aberto. Enquanto a primeira permite flexibilidade na convocação de revisores, a versão **force** impõe um marco obrigatório de congelamento do código logo na primeira versão funcional e exige o despacho simultâneo de subagentes especialistas independentes (revisor técnico/funcional e revisor visual/redundâncias), impedindo o viés do autor e o túnel de compilação.
 
 Com a skill disponível no catálogo do Antigravity, diga “vou acompanhar” para participar das decisões que mudam a direção do projeto ou “decida sozinho” para delegar as escolhas reversíveis. Você pode mudar de modo durante o trabalho.
 

@@ -70,6 +70,8 @@ Não chame inspeção de agentes de estudo com usuários. Use pesquisas reais co
 
 ## 4. Simplifique por exclusão
 
+Em entregas grandes, atribua explicitamente a revisão de redundâncias a um responsável, conforme `references/revisao.md`. Procure sobreposições na definição das capacidades, na primeira versão integrada e na verificação final; aproveite essas etapas existentes, sem criar rodadas extras por rotina. Reserve esforço para implementar e verificar as simplificações aceitas, não apenas listar sugestões.
+
 Para cada elemento questionável, pergunte: qual tarefa piora se ele sair? Remova, combine ou reorganize quando não houver contribuição concreta. Experimente mudanças reversíveis e preserve a melhor versão, mesmo que seja anterior à última tentativa.
 
 - Texto visível deve informar, orientar uma ação, distinguir algo ou ajudar uma decisão. Retire slogans, explicações da própria tela, repetição de títulos e descrições do óbvio.
