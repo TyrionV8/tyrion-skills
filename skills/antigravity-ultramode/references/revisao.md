@@ -38,6 +38,8 @@ O coordenador aceita, rejeita ou adia achados com justificativa breve. Evidênci
 
 Para uma operação central, defina entradas e resultados esperados antes de comparar implementações. Meça o que importa no domínio; não invente medições. Exercite falhas e escala relevantes. Uma implementação nova precisa preservar os comportamentos necessários e melhorar propriedades identificáveis. Menos linhas ou uma biblioteca nova não demonstram superioridade. Um botão não precisa mudar de aparência para sua operação tornar-se muito melhor.
 
+Antes da avaliação visual, leia `qualidade-e-imagens.md`. O revisor precisa receber imagens acessíveis e realmente inspecioná-las; descreva limitações de acesso em vez de emitir aprovação baseada no relato do implementador.
+
 ## Comparação visual
 
 Quando houver problema estrutural, prepare inicialmente duas alternativas com hipóteses diferentes: por exemplo, organizar pelo conteúdo versus organizar pela sequência da tarefa. Use os mesmos dados e os mesmos fluxos. Compare o caminho principal, compreensão das ações, decisões exigidas, recuperação de erros, informação útil e coerência estética. Uma alternativa pode ser um protótipo barato; implemente e verifique a escolhida antes da entrega.

@@ -1,11 +1,13 @@
 ---
 name: skill-wizard
-description: Entrevista o usuário, uma pergunta por vez, para criar ou melhorar skills, aproveitando o contexto disponível da conversa. Produz rascunhos editáveis em /tmp e, após autorização, instala a fonte no repositório adequado com links simbólicos para todos os agentes locais.
+description: Ajuda a descobrir o problema, questionar premissas e escolher soluções para criar ou melhorar skills, com entrevista de uma pergunta por vez, propostas criativas e revisão crítica do próprio rascunho. Produz rascunhos editáveis em /tmp e, após autorização, instala a fonte no repositório adequado com links simbólicos para todos os agentes locais.
 ---
 
 # Skill Wizard
 
-Conduza uma entrevista analítica e criativa para criar uma skill ou melhorar uma existente. Faça propostas, examine suas consequências e critique problemas concretos. A decisão final sobre o conteúdo e a instalação é do usuário.
+Atue como parceiro de concepção e decisão ao criar ou melhorar uma skill. Entenda o problema antes de consolidar a solução pedida. Faça recomendações próprias, explore alternativas e examine criticamente suas consequências, inclusive quando isso exigir abandonar sua proposta anterior. A decisão final sobre o conteúdo e a instalação é do usuário.
+
+Busque a melhor solução que conseguir sustentar para a necessidade concreta. “A melhor skill do mundo” expressa ambição de qualidade, não uma promessa verificável nem justificativa para complexidade ou revisão sem fim.
 
 ## Condução e continuidade obrigatória
 
@@ -30,6 +32,36 @@ Use sempre o contexto disponível da conversa como fonte para criar ou melhorar 
 Faça uma pergunta por vez. Aproveite respostas já dadas e não siga um questionário fixo quando uma pergunta deixar de ser útil.
 
 Investigue o objetivo, as situações que devem selecionar a skill, as entradas, os resultados esperados, os limites e os exemplos que realmente ajudem a defini-la. Apresente ideias próprias e alternativas quando elas puderem melhorar o resultado. Distinga decisões confirmadas de sugestões ainda abertas; implemente apenas decisões concretas.
+
+## Descoberta, criatividade e recomendação
+
+Não se limite a descobrir qual opção o usuário prefere. Diferencie o resultado desejado do mecanismo inicialmente sugerido. Quando houver ambiguidade relevante, formule uma hipótese curta: “Pelo exemplo, parece que o problema é X e queremos Y; isso explica o que está te incomodando?”. Apresente sua leitura como hipótese, não como intenção que o usuário já confirmou.
+
+Ajude a dar palavras ao que ainda está difícil de expressar. Peça um episódio concreto, contraste um resultado bom com um ruim, descreva um pequeno cenário ou mostre um exemplo de comportamento para que ele possa reagir. Escolha uma dessas técnicas conforme a lacuna; não transforme isso em questionário. Observe correções, desconfortos e exemplos recorrentes sem inventar preferências ou interpretações psicológicas.
+
+Antes de uma decisão importante, faça o trabalho de análise: recomende uma solução, explique o benefício, a principal limitação e o que faria você mudar de opinião. Se houver alternativas relevantes, mostre como mudam o comportamento, não apenas o nome ou a organização dos arquivos. Inclua uma possibilidade diferente da proposta inicial quando houver motivo concreto para considerá-la superior; não fabrique opções fracas para favorecer sua recomendação.
+
+Questione premissas quando elas puderem impedir o resultado. Uma skill pode precisar de um programa auxiliar, dados de referência, uma configuração da ferramenta ou uma avaliação real; às vezes, criar outra skill não é a melhor solução. Explique esse limite e proponha o caminho mais adequado sem alterar o objetivo ou executar uma expansão não autorizada. Verifique capacidades técnicas antes de prometer efeitos que instruções em texto não controlam.
+
+Combine exploração e seleção: produza alternativas suficientes para revelar escolhas reais, critique-as e recomende uma direção. Use protótipos baratos de instruções ou simulações curtas quando esclarecerem melhor que uma pergunta abstrata. Não empilhe todas as ideias no rascunho. Criatividade deve ampliar as soluções possíveis; crítica deve selecionar as que servem ao problema.
+
+Se discordar, indique a consequência concreta e uma alternativa melhor. Não discorde por hábito, não bajule a proposta e não esconda uma objeção relevante para agradar. Depois de uma decisão informada do usuário, respeite-a; reabra somente diante de evidência nova ou contradição material.
+
+## Autocrítica do desenho
+
+Antes de apresentar o rascunho para instalação, avalie-o como se fosse de outro autor:
+
+- Ele resolve o problema real ou apenas formaliza o primeiro pedido?
+- Que comportamento observável deve melhorar e como poderemos reconhecê-lo?
+- Existe uma abordagem mais simples ou eficaz, inclusive fora de uma skill?
+- Quais regras competem entre si, geram perguntas desnecessárias ou incentivam trabalho sem valor?
+- Onde o agente ainda pode cumprir o texto e falhar na intenção? Que cenário concreto expõe isso?
+
+Use os achados para revisar o rascunho dentro do escopo aprovado. Se surgir uma alternativa materialmente melhor que mude uma decisão do usuário, apresente a comparação e peça essa decisão antes de substituir a direção. Não defenda uma ideia porque você a escreveu nem preserve instruções apenas pelo esforço investido.
+
+Para mudanças relevantes, confronte o desenho com um caso normal, um caso difícil e um caso em que ele deveria fazer menos ou não atuar. Prefira comportamento e evidências a verificar palavras-chave. Distinga inspeção das instruções, simulação e teste real; não afirme que a skill funciona por ter passado apenas em validação estrutural. Não invente aprovação de outro agente ou teste não executado.
+
+Na revisão entregue ao usuário, destaque a recomendação, a mudança de comportamento pretendida e limitações materiais. Faça nova rodada quando houver um problema, hipótese ou alternativa de valor a investigar; não exija defeitos ou mudanças em toda revisão. Encerre quando o desenho atender à necessidade com evidência proporcional, deixando hipóteses restantes explícitas para o uso real.
 
 ## Opções de resposta
 

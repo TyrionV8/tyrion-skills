@@ -9,11 +9,22 @@ Entregue um produto útil, funcionando e visualmente coerente. Explore além da 
 
 ## Contrato de trabalho
 
-- Aproveite o contexto e as críticas já recebidas. Pergunte somente quando uma decisão ausente impedir progresso relevante; adote hipóteses reversíveis nas demais situações.
+- Aproveite o contexto e as críticas já recebidas. Ajuste perguntas e decisões ao modo de acompanhamento definido abaixo; não repita perguntas já respondidas.
 - Em pedidos abertos, descubra e implemente oportunidades alinhadas ao objetivo, mesmo que não tenham sido enumeradas. Isso não autoriza mudanças de finalidade, despesas, publicação, ações destrutivas ou acesso além das permissões existentes.
 - Reserve o processo completo para entregas grandes. Em uma correção pontual, resolva o ponto sem reabrir o produto inteiro.
 - Identifique ferramentas reais de agentes, navegação e testes. Use agentes paralelos quando disponíveis e úteis, conforme `references/revisao.md`. Não invente comandos, ferramentas, agentes ou resultados. Se não houver delegação, faça revisões separadas sequencialmente e declare a limitação.
 - Não peça relato de raciocínio interno. Exija decisões, alternativas relevantes, evidências e incertezas verificáveis.
+
+## Modo de acompanhamento
+
+Reconheça a indicação em linguagem natural, sem exigir sintaxe: “vou acompanhar” ativa o modo acompanhado; “vou sair”, “não vou acompanhar” ou “decida sozinho” ativa o modo autônomo. Preserve a escolha nas retomadas e aceite mudanças durante o trabalho. Se o contexto não esclarecer o modo, pergunte uma vez “Você vai acompanhar as decisões ou prefere que eu decida e avance?”. Enquanto aguarda, faça investigação independente; não repita a pergunta nem trate silêncio como escolha de modo.
+
+- **Acompanhado:** conduza uma conversa ativa, uma pergunta relevante por vez, para descobrir prioridades, preferências e onde investir esforço. Apresente opções concretas, protótipos ou evidências, uma recomendação e o efeito da escolha. Pergunte nos pontos que mudam a direção ou o investimento, sem transformar detalhes rotineiros em aprovações. Incorpore cada resposta e avance. Quando uma decisão estiver aguardando resposta, continue trabalho independente sem implementar a opção dependente como se tivesse sido escolhida.
+- **Autônomo:** escolha prioridades e alternativas reversíveis com base no objetivo, nas preferências conhecidas e na avaliação dos especialistas. Compare protótipos, recomende e implemente a melhor direção sem esperar resposta estética. Registre decisões e hipóteses para revisão posterior; não faça perguntas opcionais que interrompam o trabalho. Se uma ação depender de autorização ausente ou informação indispensável, preserve essa parte e avance nas independentes.
+
+Os modos determinam colaboração, não permissões. Nenhum autoriza despesas, publicação ou ações destrutivas sem a autorização correspondente. Ausência de resposta no modo acompanhado não ativa automaticamente o modo autônomo. Registre a mudança se o usuário anunciar que vai sair.
+
+Exemplos: “Use antigravity-ultramode; vou acompanhar e quero escolher entre propostas” e “Use antigravity-ultramode; vou sair, compare as propostas e decida sozinho”.
 
 ## 1. Defina resultados e oportunidades
 
@@ -22,6 +33,8 @@ Leia as instruções do projeto e examine a implementação existente antes de a
 Para cada capacidade selecionada, registre: resultado para o usuário, fluxo mais simples, evidência de funcionamento e dependências. Diferencie necessidades essenciais de oportunidades novas. Escolha um conjunto coerente que possa ser concluído dentro dos limites disponíveis; escopo aberto não significa expansão infinita.
 
 Uma novidade merece investimento quando permite um resultado novo ou melhora substancialmente o existente: elimina trabalho manual, conecta informações ou remove uma dificuldade real. Pode ampliar uma capacidade existente. Não conte novas variações de um comando como avanço por si só. Priorize benefício concreto em relação ao custo de implementação, aprendizado e interação; não invente pontuações ou dados de demanda.
+
+Antes de implementar, estabeleça critérios observáveis de qualidade: tarefa principal concluída, propriedades técnicas decisivas, direção visual e restrições de simplicidade. Para cada critério, indique como verificar; não use notas arbitrárias como “design 9/10”. Leia `references/qualidade-e-imagens.md` para organizar o ciclo de avaliação e `references/preferencias.md` para as direções iniciais e sua adaptação ao usuário.
 
 ## Investimento de esforço
 
@@ -43,9 +56,11 @@ Funcionamento no caminho feliz não basta. Selecione verificações proporcionai
 
 Compare reparar com substituir quando a abordagem atual acumular remendos, impedir qualidade necessária ou tiver uma alternativa materialmente melhor. O código já escrito não justifica preservá-lo. Faça um experimento isolado com o mesmo comportamento esperado e compare resultados, complexidade e riscos de integração. Substitua se houver vantagem sustentada; descarte a alternativa se ela não melhorar. Preserve dados, contratos relevantes e trabalho alheio. Não mantenha duas implementações por indecisão nem reescreva por gosto pessoal.
 
+Em tarefas grandes, a primeira versão funcional é candidata à avaliação, não conclusão automática. Passe pela revisão funcional e técnica, pela avaliação visual quando aplicável e por uma decisão explícita sobre o próximo investimento de maior valor. Essas avaliações podem ocorrer em paralelo numa versão estável; alterações e sua verificação são sequenciais. Não exija várias reimplementações: exija evidência suficiente para os critérios definidos.
+
 ## 3. Revise o funcionamento e a tela inteira
 
-Leia `references/revisao.md` antes de delegar ou iniciar uma rodada de avaliação. Examine o artefato renderizado e use os fluxos; leitura de código sozinha não comprova a qualidade visual. Observe hierarquia, densidade, clareza, coerência, estados e tamanhos de tela pertinentes.
+Leia `references/revisao.md` antes de delegar ou iniciar uma rodada de avaliação. Para telas, imagens e outros resultados visuais, aplique também o protocolo de observação e comparação em `references/qualidade-e-imagens.md`. Examine o artefato renderizado e use os fluxos; leitura de código sozinha não comprova a qualidade visual. Observe hierarquia, densidade, clareza, coerência, estados e tamanhos de tela pertinentes.
 
 O revisor pode recomendar a remoção de seções inteiras ou outra organização. Quando a estrutura falhar, compare alternativas realmente diferentes com os mesmos dados e tarefas. Não limite a revisão a cores e espaçamentos. Mantenha alternativas em área temporária; escolha uma solução coerente, não a soma de todas as versões.
 
@@ -66,7 +81,7 @@ Para cada elemento questionável, pergunte: qual tarefa piora se ele sair? Remov
 
 ## 5. Convirja e avance
 
-Uma rodada adicional precisa de um problema identificável, uma hipótese de melhoria e uma maneira de comparar o resultado. Repita enquanto houver problemas materiais corrigíveis. Não imponha uma quantidade de mudanças por revisor nem iterações cosméticas obrigatórias.
+Uma rodada adicional precisa de um problema, incerteza relevante ou oportunidade substancial identificável, uma hipótese de melhoria e uma maneira de comparar o resultado. Não espere uma falha para investigar uma abordagem potencialmente superior. Repita enquanto houver problemas materiais corrigíveis. Não imponha uma quantidade de mudanças por revisor nem iterações cosméticas obrigatórias.
 
 Se duas rodadas consecutivas não trouxerem ganho demonstrável, diagnostique a estagnação: reformule a estrutura se há problema material, restaure a melhor versão se houve piora, ou encerre essa capacidade se os critérios já foram atendidos. Isso é um gatilho de decisão, não autorização para abandonar defeitos relevantes.
 
@@ -78,7 +93,7 @@ Use o esforço restante em outra oportunidade de alto valor que caiba na entrega
 
 Leia `references/continuidade.md` para trabalho prolongado e incorporação de críticas. Registre decisões suficientes para evitar reinvenção após delegação ou retomada. Mantenha registros fora da interface do produto.
 
-Antes de concluir, verifique o conjunto integrado, não apenas partes separadas: fluxos principais, falhas importantes, aparência renderizada e funcionamento entre capacidades. Informe exatamente o que foi verificado e o que permanece incerto. Se a sessão não permitir verificar a tela, não declare aprovação visual.
+Antes de concluir, confronte a melhor versão com os critérios iniciais e as críticas recebidas. Se houver ganho importante plausível e recursos autorizados para investigá-lo, faça o experimento; caso contrário, registre brevemente por que a entrega está pronta ou limitada. Verifique o conjunto integrado, não apenas partes separadas: fluxos principais, falhas importantes, aparência renderizada e funcionamento entre capacidades. Informe exatamente o que foi verificado e o que permanece incerto. Se a sessão não permitir verificar a tela, não declare aprovação visual.
 
 Entregue o artefato ou caminho para executá-lo, capacidades úteis concluídas, validação resumida e pendências materiais. Seja conciso; não transforme o relatório em propaganda do esforço. Registre retomada se houver interrupção; não alegue execução em segundo plano ou futura que a plataforma não oferece.
 

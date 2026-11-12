@@ -14,16 +14,27 @@ Uma **skill** (habilidade) é uma pasta com um arquivo `SKILL.md` que orienta o 
 
 | Habilidade | Para que serve | Exemplo de pedido |
 |---|---|---|
+| [acompanhe-o-terminal](skills/acompanhe-o-terminal/SKILL.md) | Acompanha a saída do terminal e orienta os passos que você executa. | “Acompanhe o terminal enquanto eu rodo a instalação.” |
 | [analisar-relevancia-da-transcricao](skills/analisar-relevancia-da-transcricao/SKILL.md) | Classifica falas no medidor de relevância do DriftScript, sem cortá-las automaticamente. | “Analise a relevância da transcrição.” |
+| [antigravity-ultramode](skills/antigravity-ultramode/SKILL.md) | Conduz projetos abertos no Antigravity com comparação de protótipos, revisão técnica e visual e escolha entre trabalho acompanhado e autônomo. | “Use antigravity-ultramode para criar este produto. Vou acompanhar as escolhas de direção.” |
+| [audioscripter](skills/audioscripter/SKILL.md) | Edita áudio pela transcrição no AudioScripterAI, com cortes, limpeza de voz e exportação de áudio e legendas. | “Encurte as pausas no AudioScripterAI e exporte o áudio com a legenda sincronizada.” |
+| [conectar-drift](skills/conectar-drift/SKILL.md) | Verifica e configura a conexão do agente com o editor CutWire Drift. | “Conecte o agente ao Drift.” |
 | [conectar-driftscript](skills/conectar-driftscript/SKILL.md) | Conecta ou usa o DriftScript para editar um vídeo a partir da transcrição. | “Encurte as pausas deste vídeo pelo DriftScript.” |
-| [antigravity-ultramode](skills/antigravity-ultramode/SKILL.md) | Conduz projetos grandes e abertos no Antigravity com especialistas paralelos, revisão técnica e visual, comparação de abordagens e remoção de excessos. | “Use antigravity-ultramode para criar este produto, explorar capacidades úteis e verificar os fluxos.” |
-| [planejar-multiagentes](skills/planejar-multiagentes/SKILL.md) | Transforma uma ideia já discutida em um planejamento para execução por vários agentes. | “Use planejar-multiagentes para preparar este projeto.” |
 | [executar-multiagentes](skills/executar-multiagentes/SKILL.md) | Localiza um planejamento `INICIAR.md` e coordena sua execução ou retomada. | “Use executar-multiagentes neste planejamento.” |
+| [gerar-guia-tecnico](skills/gerar-guia-tecnico/SKILL.md) | Reúne explicações e diagramas sobre um projeto ou uma funcionalidade em uma página de estudo. | “Crie um guia técnico para eu entender como a transcrição funciona.” |
+| [handoff-criar](skills/handoff-criar/SKILL.md) | Registra contexto, decisões e próximos passos em um documento para outra sessão. | “Crie um handoff com foco no que falta validar.” |
+| [handoff-retomar](skills/handoff-retomar/SKILL.md) | Localiza um documento de passagem de contexto por nome, tema, data ou horário e orienta a retomada. | “Retome o último handoff sobre transcrição.” |
+| [instrucoes-remotion](skills/instrucoes-remotion/SKILL.md) | Cria e ajusta animações Remotion sincronizadas com um corte de vídeo. | “Prepare uma prévia da animação sincronizada com esta fala.” |
 | [limpeza-final-segura](skills/limpeza-final-segura/SKILL.md) | Cuida dos arquivos auxiliares criados durante uma tarefa, preservando o que ainda for necessário. | “Ao terminar, use $limpeza-final-segura.” |
 | [make-it-glow](skills/make-it-glow/SKILL.md) | Propõe melhorias visuais para um artefato existente, com prévia antes de aplicá-las. | “Use make-it-glow para melhorar a aparência desta página.” |
-| [skill-wizard](skills/skill-wizard/SKILL.md) | Conduz uma entrevista para criar ou melhorar uma habilidade. | “Use skill-wizard para criar uma skill.” |
+| [master-ai-assist](skills/master-ai-assist/SKILL.md) | Ajuda a conduzir campanhas no Master, operando mapas, personagens, névoa, relógio e cenas. | “No Master, revele a entrada da sala e avance o relógio.” |
+| [master-estetica](skills/master-estetica/SKILL.md) | Consulta e registra padrões visuais para os mapas e as imagens de uma campanha do Master. | “Use o estilo salvo da campanha para criar um mapa.” |
+| [planejar-multiagentes](skills/planejar-multiagentes/SKILL.md) | Transforma uma ideia já discutida em um planejamento para execução por vários agentes. | “Use planejar-multiagentes para preparar este projeto.” |
+| [prompts-sequencia-cinematografica](skills/prompts-sequencia-cinematografica/SKILL.md) | Prepara instruções para transformar um roteiro em clipes ordenados no Google Flow. | “Prepare os prompts para transformar este roteiro em uma sequência no Flow.” |
+| [skill-wizard](skills/skill-wizard/SKILL.md) | Investiga o problema, compara soluções e revisa o rascunho de uma skill antes da instalação. | “Use skill-wizard para descobrir como automatizar esse fluxo.” |
+| [use-o-terminal-comigo](skills/use-o-terminal-comigo/SKILL.md) | Executa comandos dentro do objetivo autorizado e explica as etapas que você precisa assumir. | “Use o terminal comigo para configurar este projeto.” |
 
-> As habilidades de vídeo dependem do CutWire Drift e do complemento DriftScript. Algumas instruções e scripts usam caminhos absolutos da máquina original; leia o `SKILL.md` correspondente e adapte os caminhos e as dependências ao seu ambiente antes de usá-los.
+> As skills que operam o Drift, o DriftScript, o AudioScripterAI e o Master exigem o aplicativo ou complemento correspondente. Algumas instruções usam caminhos da máquina original. Consulte o `SKILL.md` para ajustar os caminhos e instalar as dependências.
 
 ## Instalação
 
@@ -70,13 +81,15 @@ A opção `--ff-only` atualiza apenas quando o histórico local pode avançar di
 
 Se uma habilidade recém-instalada não aparecer, inicie uma nova sessão do Codex e confira o link na pasta de habilidades do seu perfil. Instalar uma habilidade não instala automaticamente os aplicativos externos de que ela possa depender.
 
+### Passagem de contexto entre sessões
+
+`handoff-criar` grava um documento de passagem de contexto. `handoff-retomar` encontra o documento e recupera o próximo passo registrado. As duas skills usam o mesmo programa e precisam de Python 3.9 ou superior. A pasta padrão é `~/repos/agentes/handoffs`. Para trabalhar com outra pasta, passe `--raiz` antes de `criar` ou `buscar` no programa auxiliar.
+
 ### Construções grandes no Antigravity
 
 A `antigravity-ultramode` foi pensada para iniciar produtos e conduzir tarefas de escopo aberto. Os especialistas avaliam o funcionamento, a implementação e a interface; podem recomendar remoções ou substituir uma abordagem inadequada. O esforço adicional deve gerar qualidade e capacidades úteis, sem multiplicar textos, controles ou variações da mesma ação.
 
-Com a skill disponível no catálogo do Antigravity, experimente:
-
-> Use antigravity-ultramode para criar um aplicativo de referências visuais. Quero adicionar materiais, encontrar o que preciso e reutilizá-los. Explore capacidades adicionais úteis, use especialistas paralelos disponíveis e entregue uma interface limpa com os fluxos verificados.
+Com a skill disponível no catálogo do Antigravity, diga “vou acompanhar” para participar das decisões que mudam a direção do projeto ou “decida sozinho” para delegar as escolhas reversíveis. Você pode mudar de modo durante o trabalho.
 
 O `install.sh` não configura o Antigravity. A pasta da skill precisa estar acessível no diretório de descoberta da instalação utilizada. A execução paralela depende das ferramentas disponíveis na sessão; sem elas, a skill orienta revisões sequenciais e exige informar a limitação. Ela não altera o modelo nem ativa um modo interno de raciocínio.
 
