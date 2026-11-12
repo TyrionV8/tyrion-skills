@@ -1,6 +1,6 @@
 # Tyrion Skills
 
-**Um conjunto de habilidades para transformar pedidos ao Codex em fluxos de trabalho claros, reutilizáveis e cuidadosos.**
+**Um conjunto de habilidades para transformar pedidos a agentes de programação em fluxos de trabalho claros, reutilizáveis e cuidadosos.**
 
 Da edição de vídeo por transcrição ao planejamento com vários agentes, cada habilidade reúne instruções e, quando necessário, arquivos de apoio para uma tarefa específica.
 
@@ -8,7 +8,7 @@ Da edição de vídeo por transcrição ao planejamento com vários agentes, cad
 
 ## O que é uma skill?
 
-Uma **skill** (habilidade) é uma pasta com um arquivo `SKILL.md` que orienta o Codex sobre quando e como realizar uma tarefa. Algumas incluem também scripts (programas auxiliares), referências ou recursos visuais. Você pode chamar uma habilidade pelo nome ou descrever o que deseja fazer; a escolha depende das instruções da habilidade e do contexto da conversa.
+Uma **skill** (habilidade) é uma pasta com um arquivo `SKILL.md` que orienta o agente sobre quando e como realizar uma tarefa. O instalador deste repositório atende ao Codex; algumas habilidades também são voltadas a outros agentes, como o Antigravity. Algumas incluem também scripts (programas auxiliares), referências ou recursos visuais. Você pode chamar uma habilidade pelo nome ou descrever o que deseja fazer; a escolha depende das instruções da habilidade e do contexto da conversa.
 
 ## Habilidades
 
@@ -16,6 +16,7 @@ Uma **skill** (habilidade) é uma pasta com um arquivo `SKILL.md` que orienta o 
 |---|---|---|
 | [analisar-relevancia-da-transcricao](skills/analisar-relevancia-da-transcricao/SKILL.md) | Classifica falas no medidor de relevância do DriftScript, sem cortá-las automaticamente. | “Analise a relevância da transcrição.” |
 | [conectar-driftscript](skills/conectar-driftscript/SKILL.md) | Conecta ou usa o DriftScript para editar um vídeo a partir da transcrição. | “Encurte as pausas deste vídeo pelo DriftScript.” |
+| [antigravity-ultramode](skills/antigravity-ultramode/SKILL.md) | Conduz projetos grandes e abertos no Antigravity com especialistas paralelos, revisão técnica e visual, comparação de abordagens e remoção de excessos. | “Use antigravity-ultramode para criar este produto, explorar capacidades úteis e verificar os fluxos.” |
 | [planejar-multiagentes](skills/planejar-multiagentes/SKILL.md) | Transforma uma ideia já discutida em um planejamento para execução por vários agentes. | “Use planejar-multiagentes para preparar este projeto.” |
 | [executar-multiagentes](skills/executar-multiagentes/SKILL.md) | Localiza um planejamento `INICIAR.md` e coordena sua execução ou retomada. | “Use executar-multiagentes neste planejamento.” |
 | [limpeza-final-segura](skills/limpeza-final-segura/SKILL.md) | Cuida dos arquivos auxiliares criados durante uma tarefa, preservando o que ainda for necessário. | “Ao terminar, use $limpeza-final-segura.” |
@@ -68,6 +69,16 @@ A opção `--ff-only` atualiza apenas quando o histórico local pode avançar di
 3. Siga o fluxo e as confirmações previstos na habilidade. Para conhecer os detalhes, abra o arquivo `SKILL.md` da tabela acima.
 
 Se uma habilidade recém-instalada não aparecer, inicie uma nova sessão do Codex e confira o link na pasta de habilidades do seu perfil. Instalar uma habilidade não instala automaticamente os aplicativos externos de que ela possa depender.
+
+### Construções grandes no Antigravity
+
+A `antigravity-ultramode` foi pensada para iniciar produtos e conduzir tarefas de escopo aberto. Os especialistas avaliam o funcionamento, a implementação e a interface; podem recomendar remoções ou substituir uma abordagem inadequada. O esforço adicional deve gerar qualidade e capacidades úteis, sem multiplicar textos, controles ou variações da mesma ação.
+
+Com a skill disponível no catálogo do Antigravity, experimente:
+
+> Use antigravity-ultramode para criar um aplicativo de referências visuais. Quero adicionar materiais, encontrar o que preciso e reutilizá-los. Explore capacidades adicionais úteis, use especialistas paralelos disponíveis e entregue uma interface limpa com os fluxos verificados.
+
+O `install.sh` não configura o Antigravity. A pasta da skill precisa estar acessível no diretório de descoberta da instalação utilizada. A execução paralela depende das ferramentas disponíveis na sessão; sem elas, a skill orienta revisões sequenciais e exige informar a limitação. Ela não altera o modelo nem ativa um modo interno de raciocínio.
 
 ## Estrutura do repositório
 
