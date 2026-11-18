@@ -2,7 +2,7 @@
 
 ## Com gravação disponível
 
-Grave a janela ou a área relevante e habilite o cursor na ferramenta, quando houver essa opção. Comece perto do estado inicial e termine depois de o resultado ficar legível. Faça os movimentos, cliques e digitação em velocidade natural. Confira no arquivo gravado se o cursor realmente aparece antes de exportar.
+Grave a janela ou a área relevante e habilite o cursor na ferramenta, quando houver essa opção. Comece perto do estado inicial e termine depois de o resultado ficar legível. Para uma nova gravação, conduza a ponta do ponteiro ao centro do controle visível, clique ali e mantenha o ponteiro parado até iniciar o próximo movimento. Aguarde o próximo alvo aparecer antes de se mover em sua direção. Confira no arquivo gravado se o cursor realmente aparece antes de exportar.
 
 Elimine esperas sem valor para a demonstração e preserve duração real quando ela for o que está sendo testado. Use uma paleta compartilhada, mantenha a proporção da imagem e teste legibilidade em tamanho normal. Ajuste resolução e frequência dos quadros conforme o detalhe necessário e o tamanho de arquivo.
 
@@ -20,7 +20,17 @@ ffmpeg -i gravacao.mp4 \
 
 Se a ferramenta só entregar imagens ou omitir o ponteiro, capture a interface em mais momentos. Inclua a abertura de menus e diálogos, parte da digitação quando útil e momentos antes e depois da ação decisiva. Mantenha dimensões e enquadramento constantes. Registre a posição observada dos controles para alinhar o ponteiro sobreposto aos alvos corretos.
 
-Monte os quadros com as ferramentas locais disponíveis, por exemplo FFmpeg ou Pillow. Se necessário, interpole só o deslocamento do ponteiro entre as posições observadas, mantenha uma breve pausa no alvo e use um destaque discreto para cada clique. Mostre as mudanças da interface com os quadros capturados. Use pausas maiores nos resultados e menores durante as ações. Se o formato GIF ficar bloqueado, explique o impedimento. Entregue capturas estáticas quando forem solicitadas.
+Monte os quadros com as ferramentas locais disponíveis, como FFmpeg ou Pillow.
+Se precisar acrescentar um ponteiro, use uma posição contínua entre quadros.
+Use como referência a ponta do ponteiro e o centro da região clicável observada.
+Mantenha a ponta no centro no instante do clique e parada depois dele, inclusive
+se a imagem mudar. Comece o trajeto seguinte somente quando o novo alvo estiver
+visível e for a hora da próxima ação. Em um material com cursor gravado, preserve
+a ação observada e evite sobrepor um segundo ponteiro.
+
+Mostre as mudanças da interface com as capturas observadas. Use tempo de leitura
+suficiente para resultados e mensagens. Preserve o tempo real quando ele fizer
+parte da evidência. Se o GIF ficar bloqueado, explique o que impede a exportação.
 
 ## Conferência
 

@@ -1,6 +1,6 @@
 interface:
   display_name: "Capturar evidência"
-  short_description: "Registra testes e procedimentos pela interface"
-  default_prompt: "Use $capturar-evidencia para demonstrar este fluxo pela interface."
+  short_description: "Registra comportamentos e erros pela interface"
+  default_prompt: "Use $capturar-evidencia para registrar o comportamento desta aplicação pela interface."
 policy:
   allow_implicit_invocation: false

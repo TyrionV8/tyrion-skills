@@ -1,30 +1,77 @@
 ---
 name: capturar-evidencia
-description: "Gera evidência visual de um comportamento da interface. Use apenas por chamada explícita para demonstrar uma implementação nova ou existente, registrar um teste pela interface ou mostrar como executar um procedimento. Entrega GIF animado por padrão e capturas individuais ou reunidas em uma imagem quando solicitadas."
+description: "Registra o comportamento observado na interface de uma aplicação, inclusive erros, testes exploratórios e procedimentos. Use por chamada explícita ou como etapa de capturar-evidencia-remotion. Entrega GIF por padrão ou capturas individuais ou reunidas quando solicitadas."
 ---
 
 # Capturar evidência
 
-Ative só quando o usuário chamar `$capturar-evidencia`, mencionar o nome como invocação ou pedir expressamente o uso desta skill. Use o contexto do pedido para identificar a aplicação, a versão ou o ambiente disponível e o comportamento a registrar. Pergunte apenas se faltar uma informação que impeça identificar o fluxo ou obter acesso autorizado.
+Use quando o usuário invocar `$capturar-evidencia` ou como etapa de uma chamada
+explícita a `$capturar-evidencia-remotion`. O objetivo é documentar o que se viu
+de forma clara e reproduzível. Quem analisa a evidência decide se o comportamento
+atende ao esperado.
+
+## Escolher a origem e o ambiente
+
+- Para um novo teste, prefira executar a aplicação real, normalmente em ambiente
+  local. Use o modo de execução do projeto, confirme a versão e o ambiente dos
+  serviços conectados e faça o fluxo pela interface. Use a interface e os serviços
+  reais envolvidos, incluindo o servidor e o banco quando fizerem parte do teste.
+  Uma interface servida localmente pode estar conectada a um ambiente remoto.
+- Use dados fictícios no banco de um ambiente local isolado quando for adequado
+  ao cenário e estiver dentro do escopo. Prefira criá-los pelo fluxo normal ou pelo
+  mecanismo de preparação do projeto. Use dados reais quando forem necessários
+  e autorizados. Pergunte se houver dúvida relevante sobre
+  como rodar a aplicação, se pode inserir dados fictícios no banco local ou quais
+  ações estão autorizadas em ambiente não local. Faça a inspeção disponível antes
+  de perguntar. A autorização para capturar a tela cobre a área do fluxo solicitado.
+- Use um protótipo ou uma simulação quando o pedido for uma prévia antes da
+  implementação, quando o usuário solicitar, ou quando um problema impedir rodar
+  a aplicação e uma prévia ainda atender ao pedido. Identifique o impedimento, o que
+  foi simulado e quais partes executaram de fato. Se o objetivo for registrar um
+  erro na aplicação, preserve o erro observado e os passos que levaram a ele.
+- Se o usuário fornecer mídia e pedir que ela seja usada, trabalhe a partir dela
+  e identifique sua origem. Registre eventual lacuna na sequência observada.
+- Capture só a área pertinente e proteja credenciais, notificações privadas e
+  dados sensíveis. Se depender de login, acesso ou ação fora da autorização
+  disponível, conclua o que puder verificar e indique a ação necessária.
 
 ## Escolher o formato
 
-- Por padrão, entregue **um GIF animado** (Graphics Interchange Format), com o ponteiro visível e movimento entre as ações. Consulte [Produzir o GIF](references/produzir-gif.md).
-- Para **prints** ou **capturas individuais**, entregue os arquivos em uma mesma pasta, com nomes em ordem e legíveis.
-- Para **prints unificadas**, entregue uma imagem única com as capturas em ordem. Use legendas curtas quando elas ajudarem a identificar a ação ou o resultado.
-- Se o usuário pedir uma combinação, entregue os formatos escolhidos. Guarde insumos temporários da montagem fora da pasta de entrega.
+- Para uma nova captura, entregue por padrão **um GIF animado** (Graphics
+  Interchange Format), com o ponteiro visível e movimento entre as ações. Consulte
+  [Produzir o GIF](references/produzir-gif.md).
+- Para **prints** ou **capturas individuais**, entregue os arquivos em uma mesma
+  pasta, com nomes em ordem e legíveis. Para **prints unificadas**, reúna as
+  capturas em uma imagem, na sequência observada.
+- Para edição de mídia existente, preserve o formato de entrada quando o pedido
+  deixar o formato em aberto. Se forem pedidos vários formatos, entregue os
+  selecionados. Guarde os insumos de montagem fora da pasta de entrega.
 
-## Registrar o fluxo
+## Registrar o comportamento
 
-1. Identifique o que deve ficar visível para que a evidência faça sentido por si. Mostre o estado inicial quando relevante, a ação decisiva e o resultado observado. Para um teste, confira o resultado esperado e registre também falhas observadas. Para instruções de uso, mostre os controles necessários para reproduzir o procedimento.
-2. Abra a interface que contém o trabalho pedido. Quando houver versões diferentes em execução, confirme a versão pelo comportamento ou por um identificador verificável. Use as ferramentas permitidas de navegador, captura de janela ou gravação disponíveis no ambiente.
-3. Confirme que a área capturada e as ações fazem parte do pedido. A invocação explícita para gerar evidência autoriza capturar a área do fluxo solicitado. Para ações com efeitos reais, use a autorização específica prevista para o ambiente ou demonstre com dados fictícios. Limite o enquadramento à aplicação e preserve credenciais, notificações privadas e conteúdo pessoal.
-4. Execute ou acompanhe pela interface a sequência pertinente. Use dados fictícios quando o pedido permitir demonstração e dados reais quando forem essenciais e autorizados. Se depender de login, acesso ou versão indisponível, conclua as verificações independentes e indique a ação necessária. Use imagens previamente fornecidas com identificação da origem e do limite da evidência.
+1. Mostre o estado inicial quando relevante, a ação decisiva e o resultado
+   observado. Se houver um resultado esperado conhecido, identifique-o como
+   expectativa. Em um teste exploratório, registre o que aconteceu em cada ponto
+   relevante mesmo que o resultado ainda seja desconhecido.
+2. Quando houver uma divergência, mostre o passo que a antecedeu e o que ficou
+   visível em seguida, como mensagem literal, estado inalterado, resposta
+   incompleta ou mudança inesperada. Preserve a sequência e o tempo de espera
+   quando forem necessários para reproduzir o ocorrido.
+3. Forneça o contexto necessário para reproduzir o fluxo. Inclua ambiente,
+   versão quando disponível, condição inicial, ações e dados de teste que possam
+   ser compartilhados. Descreva apenas o que foi observado e indique quais
+   componentes foram exercitados ou simulados quando isso estiver verificado.
 
 ## Verificar e entregar
 
-- Abra ou decodifique o resultado. Confira a ordem das etapas, os textos e controles legíveis e o resultado realmente mostrado. No GIF, verifique a reprodução, a duração, a posição do ponteiro e o tempo de leitura. Nas imagens, confira os recortes e a resolução do arquivo final.
-- Salve no local solicitado ou em uma pasta de artefatos do projeto, com nome ligado ao comportamento registrado. Mostre a mídia na resposta quando o ambiente permitir. Forneça acesso aos arquivos em resolução original ou à pasta das capturas.
-- Identifique o ambiente observado e se os dados são fictícios. Se houve montagem de quadros, sobreposição de ponteiro ou abreviação relevante, declare a edição e preserve a ordem dos eventos.
+- Abra ou decodifique a saída. Confira ordem, legibilidade, recorte, posição do
+  ponteiro e tempo de leitura. Mantenha visíveis mensagens e estados relevantes
+  para reproduzir o comportamento.
+- Salve no local solicitado ou em uma pasta de artefatos do projeto. Mostre a
+  mídia na resposta quando possível e disponibilize os arquivos.
+- Informe o ambiente, os dados fictícios quando usados e as edições relevantes
+  da captura, como montagem de quadros ou ponteiro acrescentado. Entregue a
+  evidência e o relato da observação para que a pessoa responsável os avalie.
 
-Exemplo de invocação. “Use `$capturar-evidencia` para mostrar, na prévia local, o botão mudando depois da primeira concessão e voltando após a última revogação.”
+Exemplo de invocação. “Use `$capturar-evidencia` para tentar salvar um cadastro
+na aplicação local e registrar o que aparecer depois do clique.”

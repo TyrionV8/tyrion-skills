@@ -20,6 +20,8 @@ Uma **skill** (habilidade) é uma pasta com um arquivo `SKILL.md` que orienta o 
 | [antigravity-ultramode-force](skills/antigravity-ultramode-force/SKILL.md) | Conduz construções no Antigravity com marco obrigatório de congelamento e despacho compulsório de subagentes independentes para revisão técnica e simplificação de redundâncias. | “Use antigravity-ultramode-force para criar este produto com validação multiagente obrigatória.” |
 | [appimageicon](skills/appimageicon/SKILL.md) | Garante a exibição correta e persistente de ícones em AppImages no Linux (caminho absoluto no .desktop, sincronização de StartupWMClass e auto-registro via $APPIMAGE). | “Configure o ícone deste AppImage para nunca sumir na barra de tarefas.” |
 | [audioscripter](skills/audioscripter/SKILL.md) | Edita áudio pela transcrição no AudioScripterAI, com cortes, limpeza de voz e exportação de áudio e legendas. | “Encurte as pausas no AudioScripterAI e exporte o áudio com a legenda sincronizada.” |
+| [capturar-evidencia](skills/capturar-evidencia/SKILL.md) | Registra o comportamento observado pela interface, inclusive erros. | “Use $capturar-evidencia para registrar o que acontece ao salvar o cadastro localmente.” |
+| [capturar-evidencia-remotion](skills/capturar-evidencia-remotion/SKILL.md) | Usa capturar-evidencia e aplica setas, realces e indicações de etapa com Remotion. | “Use $capturar-evidencia-remotion nestas capturas e destaque a mensagem de erro.” |
 | [conectar-drift](skills/conectar-drift/SKILL.md) | Verifica e configura a conexão do agente com o editor CutWire Drift. | “Conecte o agente ao Drift.” |
 | [conectar-driftscript](skills/conectar-driftscript/SKILL.md) | Conecta ou usa o DriftScript para editar um vídeo a partir da transcrição. | “Encurte as pausas deste vídeo pelo DriftScript.” |
 | [executar-multiagentes](skills/executar-multiagentes/SKILL.md) | Localiza um planejamento `INICIAR.md` e coordena sua execução ou retomada. | “Use executar-multiagentes neste planejamento.” |
@@ -108,4 +110,4 @@ tyrion-skills/
         └── assets/             # Recursos de apoio, quando necessários
 ```
 
-Cada habilidade é independente: consulte suas instruções antes de executá-la ou adaptá-la. Pastas de apoio aparecem apenas quando a habilidade precisa delas.
+Consulte as instruções de cada habilidade e das dependências indicadas antes de executá-la ou adaptá-la. Pastas de apoio aparecem apenas quando a habilidade precisa delas.

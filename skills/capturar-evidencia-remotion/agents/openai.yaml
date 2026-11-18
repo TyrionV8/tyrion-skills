@@ -1,0 +1,6 @@
+interface:
+  display_name: "Capturar evidência com Remotion"
+  short_description: "Anota evidências de interface em GIFs e capturas"
+  default_prompt: "Use $capturar-evidencia-remotion para registrar este fluxo e destacar o que acontece."
+policy:
+  allow_implicit_invocation: false
