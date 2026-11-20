@@ -24,6 +24,9 @@ Uma **skill** (habilidade) é uma pasta com um arquivo `SKILL.md` que orienta o 
 | [capturar-evidencia-remotion](skills/capturar-evidencia-remotion/SKILL.md) | Usa capturar-evidencia e aplica setas, realces e indicações de etapa com Remotion. | “Use $capturar-evidencia-remotion nestas capturas e destaque a mensagem de erro.” |
 | [conectar-drift](skills/conectar-drift/SKILL.md) | Verifica e configura a conexão do agente com o editor CutWire Drift. | “Conecte o agente ao Drift.” |
 | [conectar-driftscript](skills/conectar-driftscript/SKILL.md) | Conecta ou usa o DriftScript para editar um vídeo a partir da transcrição. | “Encurte as pausas deste vídeo pelo DriftScript.” |
+| [cota-antigravity](skills/cota-antigravity/SKILL.md) | Consulta a cota do Antigravity e gerencia alarmes de consumo. | “Mostre minha cota do Antigravity.” |
+| [cota-claude](skills/cota-claude/SKILL.md) | Consulta a cota do Claude Code e acompanha um limite durante o trabalho. | “Avise quando restarem 20% da cota semanal.” |
+| [cota-codex](skills/cota-codex/SKILL.md) | Consulta a cota do Codex e configura um alarme para a conversa. | “Mostre minha cota do Codex.” |
 | [executar-multiagentes](skills/executar-multiagentes/SKILL.md) | Localiza um planejamento `INICIAR.md` e coordena sua execução ou retomada. | “Use executar-multiagentes neste planejamento.” |
 | [gerar-guia-tecnico](skills/gerar-guia-tecnico/SKILL.md) | Reúne explicações e diagramas sobre um projeto ou uma funcionalidade em uma página de estudo. | “Crie um guia técnico para eu entender como a transcrição funciona.” |
 | [handoff-criar](skills/handoff-criar/SKILL.md) | Registra contexto, decisões e próximos passos em um documento para outra sessão. | “Crie um handoff com foco no que falta validar.” |
