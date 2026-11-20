@@ -38,8 +38,12 @@ atende ao esperado.
 ## Escolher o formato
 
 - Para uma nova captura, entregue por padrão **um GIF animado** (Graphics
-  Interchange Format), com o ponteiro visível e movimento entre as ações. Consulte
-  [Produzir o GIF](references/produzir-gif.md).
+  Interchange Format). Em cada ação com o mouse, mostre o ponteiro percorrendo
+  o trajeto até o centro do controle, o acionamento e uma pausa no resultado.
+  O ponteiro desenhado usa o cursor do tema do sistema (no Linux Mint,
+  Bibata-Modern-Classic); veja [Aparência do ponteiro](references/produzir-gif.md#aparência-do-ponteiro).
+  Se a origem for uma série de imagens estáticas, acrescente quadros intermediários
+  do movimento. Consulte [Produzir o GIF](references/produzir-gif.md).
 - Para **prints** ou **capturas individuais**, entregue os arquivos em uma mesma
   pasta, com nomes em ordem e legíveis. Para **prints unificadas**, reúna as
   capturas em uma imagem, na sequência observada.
@@ -64,9 +68,11 @@ atende ao esperado.
 
 ## Verificar e entregar
 
-- Abra ou decodifique a saída. Confira ordem, legibilidade, recorte, posição do
-  ponteiro e tempo de leitura. Mantenha visíveis mensagens e estados relevantes
-  para reproduzir o comportamento.
+- Reproduza o GIF final em velocidade normal antes de entregar ou anexar.
+  Confira se o ponteiro percorre cada trajeto, chega ao controle antes do
+  acionamento e permanece ali enquanto o resultado aparece. Corrija saltos
+  entre posições ou ponteiros duplicados e confira a nova exportação.
+  Verifique também ordem, legibilidade, recorte e tempo de leitura.
 - Salve no local solicitado ou em uma pasta de artefatos do projeto. Mostre a
   mídia na resposta quando possível e disponibilize os arquivos.
 - Informe o ambiente, os dados fictícios quando usados e as edições relevantes
